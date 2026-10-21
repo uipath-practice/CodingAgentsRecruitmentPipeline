@@ -1,0 +1,2142 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hands-on learner's handbook for building UiPath agents and Maestro orchestrations with coding agents">
+      
+      
+        <meta name="author" content="Sergey Shumilov">
+      
+      
+        <link rel="canonical" href="https://uipath-practice.github.io/CodingAgentsRecruitmentPipeline/coding-agents-hands-on/">
+      
+      
+        <link rel="prev" href="../loan-application-underwriting/agenda/">
+      
+      
+        <link rel="next" href="../resources/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Hands-On Session - UiPath Coding Agents Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#coding-agents-uipath-hands-on-session" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UiPath Coding Agents Workshop" class="md-header__button md-logo" aria-label="UiPath Coding Agents Workshop" data-md-component="logo">
+      
+  <img src="../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UiPath Coding Agents Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hands-On Session
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../what-is-a-coding-agent/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  What's a Coding Agent?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../loan-application-underwriting/agenda/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Agenda
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hands-On Session
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../resources/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../next-steps/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Next Steps
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UiPath Coding Agents Workshop" class="md-nav__button md-logo" aria-label="UiPath Coding Agents Workshop" data-md-component="logo">
+      
+  <img src="../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    UiPath Coding Agents Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-a-coding-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What's a Coding Agent?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loan-application-underwriting/agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agenda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Session
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You'll Build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The scenario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-contract-between-the-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The contract between the components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The contract between the components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-candidate-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The candidate pool
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-1-the-coded-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 1 — the Coded Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lab 1 — the Coded Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-a-coded-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's a Coded Agent?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-hiring-agent-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the hiring agent does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-it-generates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it generates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while-it-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        While it builds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-it-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run it locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publish the agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-2-the-rpa-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 2 — the RPA Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lab 2 — the RPA Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-rpa-for-this-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why RPA for this part?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-workflow-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the workflow does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-prompt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-workflow-skill-thinks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the workflow skill thinks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-it-locally_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run it locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-the-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publish the workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-3-the-maestro-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Lab 3 — the Maestro Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Lab 3 — the Maestro Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-a-maestro-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's a Maestro Flow?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-flow-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the flow does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-prompt_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-the-flow-in-studio-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See the flow in Studio Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-it-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it builds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-it-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run it end to end
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-it-usually-breaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where it usually breaks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gotchas-youll-hit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gotchas you'll hit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you built
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-cli-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: CLI cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../next-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="coding-agents-uipath-hands-on-session">Coding Agents + UiPath: Hands-On Session<a class="headerlink" href="#coding-agents-uipath-hands-on-session" title="Permanent link">&para;</a></h1>
+<p><strong>Build a Coded Agent and an RPA workflow, then orchestrate them with a human approval in Maestro — the whole recruitment pipeline, in two 90-minute blocks.</strong></p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Every week a recruiter at a staffing agency does the same three things by hand: write a description for each open role, read through a candidate pool to find who fits, and register the shortlist in the client's portal. Hours of work, done differently by every recruiter, with no record of who approved what.</p>
+<p>You'll automate all three — by describing what you want in plain English and letting your coding agent build it. Two components do the work, and one <strong>Maestro</strong> flow connects them, with the recruiter still making the final call.</p>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>By the end of the session you'll start one Maestro run with a job title and watch it end with approved candidates registered on UiBank. Along the way you'll have generated a Python agent, an XAML workflow, and a Maestro Flow — all by prompting a coding agent, not by dragging activities onto a canvas.</p>
+<div class="admonition tip">
+<p class="admonition-title">Training Environment</p>
+<p>Log in at <strong><a href="https://cloud.uipath.com/tpenlabs">https://cloud.uipath.com/tpenlabs</a></strong> using tenant <strong>InvokeWorkshop</strong>.</p>
+</div>
+<h2 id="what-youll-build">What You'll Build<a class="headerlink" href="#what-youll-build" title="Permanent link">&para;</a></h2>
+<p>Three labs, one pipeline:</p>
+<ol>
+<li><strong>Coded Agent</strong> <em>(Block 1)</em> — a Python LangGraph agent that takes a job title, generates a structured job description, scores a candidate pool against it, and returns the top 3 matches</li>
+<li><strong>RPA Workflow</strong> <em>(Block 2)</em> — a Studio XAML workflow that takes a list of candidates, registers each one on the UiBank web form, and returns a status per candidate</li>
+<li><strong>Maestro Flow</strong> <em>(Block 2)</em> — a UiPath Flow that runs the agent, creates an approval task in <strong>Action Center</strong> for the recruiter, and on approval runs the RPA workflow with the shortlist</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Why this architecture</p>
+<p><strong>Maestro</strong> passes the data from one step to the next, so there's no database to set up and no custom app to build. The recruiter reviews the shortlist in an <strong>Action Center</strong> task — the review screen comes with the platform. That's what lets the full pipeline, orchestration included, fit in 180 minutes.</p>
+</div>
+<h2 id="the-scenario">The scenario<a class="headerlink" href="#the-scenario" title="Permanent link">&para;</a></h2>
+<div style="font-family: inherit; margin: 1.5rem 0 2rem;">
+
+  <div style="background: #16213e; border-left: 10px solid #FA4616; padding: 26px 32px; margin-bottom: 22px;">
+    <div style="font-size: 20px; font-weight: 700; color: #ffffff; line-height: 1.35;">A staffing agency is digitizing its recruitment pipeline.</div>
+    <div style="font-size: 15px; font-style: italic; color: #f6c3ab; margin-top: 10px; line-height: 1.45;">Shortlist candidates, keep a human in the loop, register the approved ones — one process, end to end.</div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: stretch;">
+  <div style="flex: 1 1 260px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 5px solid #FA4616; padding: 20px 22px 22px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px;">
+      <img src="../coding-agents-hands-on.images/icon-search.png" alt="" style="width: 46px; height: 46px; box-shadow: none; border: none;">
+      <span style="font-size: 34px; font-weight: 700; color: #f6c3ab; line-height: 1;">01</span>
+    </div>
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 12px;">Coded Agent</div>
+    <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55; margin-bottom: 18px;">Turns a job title into a structured JD and scores a candidate pool against it.</div>
+    <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #FA4616; font-weight: 600;">&rarr; Returns the top 3 matches</div>
+  </div>
+  <div style="flex: 1 1 260px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 5px solid #FA4616; padding: 20px 22px 22px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px;">
+      <img src="../coding-agents-hands-on.images/icon-register.png" alt="" style="width: 46px; height: 46px; box-shadow: none; border: none;">
+      <span style="font-size: 34px; font-weight: 700; color: #f6c3ab; line-height: 1;">02</span>
+    </div>
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 12px;">RPA Workflow</div>
+    <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55; margin-bottom: 18px;">Registers each candidate it receives on <code>uibank.uipath.com/register-account</code>.</div>
+    <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #FA4616; font-weight: 600;">&rarr; Returns a status per candidate</div>
+  </div>
+  <div style="flex: 1 1 260px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 5px solid #FA4616; padding: 20px 22px 22px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px;">
+      <span style="font-size: 40px; line-height: 46px;">🔗</span>
+      <span style="font-size: 34px; font-weight: 700; color: #f6c3ab; line-height: 1;">03</span>
+    </div>
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 12px;">Maestro Flow</div>
+    <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55; margin-bottom: 18px;">Runs the agent, waits for the recruiter's approval in Action Center, then runs the robot.</div>
+    <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #FA4616; font-weight: 600;">&rarr; One run, end to end</div>
+  </div>
+  </div>
+
+</div>
+
+<p>How the data moves through one run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>job_title
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   ▼
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[ Coded Agent ] ──▶ job + top 3 matches
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                          │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                          ▼
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>              [ Approval task in Action Center ]
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                          │  approved
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                          ▼
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>              [ RPA Workflow on UiBank ] ──▶ status per candidate
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                          │
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                          ▼
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                     flow output
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  All three steps run inside one Maestro Flow.
+</code></pre></div>
+<h2 id="the-contract-between-the-components">The contract between the components<a class="headerlink" href="#the-contract-between-the-components" title="Permanent link">&para;</a></h2>
+<p>You build the three pieces in separate labs, so agree on the data shapes first. Every prompt below uses these names — keep them exactly as written and the Maestro lab becomes wiring, not debugging.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Coded Agent</strong></td>
+<td style="text-align: left;"><code>job_title</code> (string)</td>
+<td style="text-align: left;"><code>job</code> (object) and <code>matches</code> (array of 3 candidates, each with all original fields plus <code>score</code> and <code>reason</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RPA Workflow</strong></td>
+<td style="text-align: left;"><code>in_CandidatesJson</code> (string — a JSON array of candidates)</td>
+<td style="text-align: left;"><code>out_ResultsJson</code> (string — a JSON array of <code>{ username, status }</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Maestro Flow</strong></td>
+<td style="text-align: left;"><code>job_title</code> (string)</td>
+<td style="text-align: left;">the <code>job</code> and <code>out_ResultsJson</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Why the matches keep every candidate field</p>
+<p>The robot needs the date of birth, title, email, and the rest to fill in the UiBank form. If the agent returns only names and scores, Lab 3 breaks. That's why the Lab 1 prompt says it explicitly.</p>
+</div>
+<h3 id="the-candidate-pool">The candidate pool<a class="headerlink" href="#the-candidate-pool" title="Permanent link">&para;</a></h3>
+<p>Save this as <code>candidates.json</code> in an empty folder for Lab 1. The agent scores it, and the robot later registers the candidates the recruiter approves.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">[</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alice"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nguyen"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Female"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1/15/1990"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Single"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alice.nguyen"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alice.nguyen@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Forward Deployed Engineer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"years_experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span><span class="w"> </span><span class="s2">"TypeScript"</span><span class="p">,</span><span class="w"> </span><span class="s2">"REST APIs"</span><span class="p">,</span><span class="w"> </span><span class="s2">"UiPath"</span><span class="p">,</span><span class="w"> </span><span class="s2">"customer workshops"</span><span class="p">]},</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ben"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Carter"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J."</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Male"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3/22/1985"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Married"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ben.carter"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ben.carter@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RPA Developer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"years_experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"UiPath Studio"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Orchestrator"</span><span class="p">,</span><span class="w"> </span><span class="s2">"VB.NET"</span><span class="p">,</span><span class="w"> </span><span class="s2">"SQL"</span><span class="p">]},</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clara"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Osei"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Female"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7/4/1992"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Single"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clara.osei"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clara.osei@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AI Engineer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"years_experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LangGraph"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LLM evaluation"</span><span class="p">,</span><span class="w"> </span><span class="s2">"AWS"</span><span class="p">]},</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"David"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kowalski"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Male"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11/2/1981"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Married"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david.kowalski"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david.kowalski@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Solutions Architect"</span><span class="p">,</span><span class="w"> </span><span class="nt">"years_experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Enterprise architecture"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Azure"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Integrations"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Pre-sales"</span><span class="p">]},</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Elena"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rossi"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M."</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Female"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5/30/1994"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Single"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elena.rossi"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elena.rossi@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Frontend Developer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"years_experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"React"</span><span class="p">,</span><span class="w"> </span><span class="s2">"TypeScript"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Design systems"</span><span class="p">]},</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Farid"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Haddad"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Male"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9/12/1997"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Single"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"farid.haddad"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"farid.haddad@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data Analyst"</span><span class="p">,</span><span class="w"> </span><span class="nt">"years_experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"SQL"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Power BI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Python"</span><span class="p">]},</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grace"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kim"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Female"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2/18/1991"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Married"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grace.kim"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grace.kim@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Success Engineer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"years_experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span><span class="w"> </span><span class="s2">"APIs"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Customer onboarding"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Troubleshooting"</span><span class="p">]},</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hugo"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Martin"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Male"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8/8/1983"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Married"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hugo.martin"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hugo.martin@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Project Manager"</span><span class="p">,</span><span class="w"> </span><span class="nt">"years_experience"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Agile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Stakeholder management"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Budgeting"</span><span class="p">]}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">]</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Three things the robot needs to know about this data</p>
+<ul>
+<li>An empty <code>middle_name</code> is valid. The form should skip the field, not type an empty string.</li>
+<li>The date format is <code>MM/DD/YYYY</code>, which matches the form's picker.</li>
+<li>All test passwords are demo-grade. In production, pull them from a vault.</li>
+</ul>
+</div>
+<h2 class="lab-title" id="lab-1-the-coded-agent"><img src="../coding-agents-hands-on.images/icon-search.png" alt="" style="width: 1.05em; height: 1.05em; vertical-align: -0.12em; margin-right: 0.4em; border: none; box-shadow: none;">Lab 1 — the Coded Agent<a class="headerlink" href="#lab-1-the-coded-agent" title="Permanent link">&para;</a></h2>
+<div style="font-size: 15px; font-style: italic; color: #d1603a; margin: -0.6rem 0 1rem;">Job description + candidate shortlist</div>
+
+<p><strong>Block 1 · 50 min build + 10 min checkpoint</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Minutes</th>
+<th style="text-align: left;">What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0–5</td>
+<td style="text-align: left;">Save <code>candidates.json</code>, start your coding agent in that folder, paste the prompt.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5–30</td>
+<td style="text-align: left;">Answer its questions and let it build. Read <em>What's a Coded Agent?</em> while it works.</td>
+</tr>
+<tr>
+<td style="text-align: left;">30–40</td>
+<td style="text-align: left;">Run the agent locally and check the output against the contract.</td>
+</tr>
+<tr>
+<td style="text-align: left;">40–50</td>
+<td style="text-align: left;">Publish the agent as a process in the <code>CodingAgentsILT</code> folder.</td>
+</tr>
+<tr>
+<td style="text-align: left;">50–60</td>
+<td style="text-align: left;">Checkpoint with the group.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="whats-a-coded-agent">What's a Coded Agent?<a class="headerlink" href="#whats-a-coded-agent" title="Permanent link">&para;</a></h3>
+<div style="background: #16213e; border-left: 10px solid #FA4616; padding: 22px 28px; margin: 1.2rem 0 1.4rem;">
+  <div style="font-size: 19px; font-weight: 700; color: #ffffff; line-height: 1.35;">Python agents that run on UiPath infrastructure.</div>
+  <div style="font-size: 15px; font-style: italic; color: #f6c3ab; margin-top: 9px;">Not to be confused with the coding agent you're typing into — you write this one yourself.</div>
+</div>
+
+<p>You pick the framework, use the UiPath SDK, package it with one CLI command, and deploy it to Orchestrator.</p>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin: 1.4rem 0 0.8rem;">SUPPORTED FRAMEWORKS</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; margin-bottom: 1.5rem;">
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 9px;">LangGraph</div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Graph-based, stateful agent flows</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 9px;">LlamaIndex</div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">RAG and document-grounded agents</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 9px;">OpenAI Agents SDK</div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">OpenAI's official agent framework</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 9px;">Plain Python</div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Simple function-based agents</div>
+  </div>
+</div>
+
+<h3 id="what-the-hiring-agent-does">What the hiring agent does<a class="headerlink" href="#what-the-hiring-agent-does" title="Permanent link">&para;</a></h3>
+<p>The four steps run in order — each one feeds the next, and <code>Return</code> hands the shortlist to whoever called the agent. In Lab 3, that's your Maestro Flow.</p>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin: 1.4rem 0 0.8rem;">WHAT THE AGENT DOES</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; margin-bottom: 1.5rem;">
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Input</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">01</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Take a job title, for example "Forward Deployed Engineer"</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Generate</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">02</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Structured job description: title, level, must-haves, nice-to-haves</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Match</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">03</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Score every candidate in the pool against the JD, with a reason</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Return</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">04</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Output the JD and the top 3 matches, in the contract's shape</div>
+  </div>
+</div>
+
+<div style="background: #faf8f6; border: 1px solid #eee3dc; border-left: 4px solid #FA4616; padding: 18px 22px; margin: 1.4rem 0;">
+  <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin-bottom: 12px;">YOUR OBJECTIVES</div>
+  <ul style="list-style: none; margin: 0 0 16px; padding: 0; font-size: 16px; color: #333; line-height: 1.55;">
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">1</span>
+      <span>Prompt your coding agent to scaffold a LangGraph agent.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">2</span>
+      <span>Use the UiPath LLM Gateway for the model calls, so you don't need your own API key.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">3</span>
+      <span>Run it locally and check the output matches the contract.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">4</span>
+      <span>Publish it as a process in the <code>CodingAgentsILT</code> folder, so Maestro can call it.</span>
+    </li>
+  </ul>
+  <div style="border-top: 1px solid #eee3dc; padding-top: 12px; margin-top: 4px;">
+    <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin-bottom: 9px;">WHAT YOU NEED</div>
+    <ul style="margin: 0; padding-left: 18px; font-size: 15px; color: #4a4a4a; line-height: 1.55;"><li style="margin-bottom: 5px;"><code>candidates.json</code> — see <a href="#the-candidate-pool">The candidate pool</a>.</li><li style="margin-bottom: 5px;">A logged-in <code>uip</code> CLI session. No personal LLM API key needed.</li></ul>
+  </div>
+</div>
+
+<h3 id="the-prompt">The prompt<a class="headerlink" href="#the-prompt" title="Permanent link">&para;</a></h3>
+<p>This is real text you can paste:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Build a UiPath Coded Agent in LangGraph called {YourName}JobMatchingAgent,
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>in a new folder named {YourName}JobMatchingAgent.
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Input: { "job_title": string }. Output: { "job": object, "matches": array }.
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>1. Write a JD for the job title with 3-5 role-specific must-have skills
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2. Score each candidate in candidates.json (copy it into the project) from
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>   0 to 100. A headline matching the job title counts most, then skills
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>   matching the must-haves
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>3. Return the JD as "job" and the top 3 as "matches", highest first. Each
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>   match keeps all original candidate fields, plus "score" and "reason"
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>Use the UiPath LLM Gateway at temperature 0, no external API keys. Add 3
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>evals that check the candidate whose headline matches the job title ranks
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>first.
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Why the prompt is this specific</p>
+<p>Fixed input and output names, a provided candidate pool, no database. Every constraint you add removes a question the agent would otherwise ask — or a decision it would make on its own. That's what keeps this lab inside 50 minutes, and what makes Lab 3 plug together.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Why the prompt sets a scoring rule</p>
+<p>Without one, the agent writes a fresh JD on every run — often with generic must-haves like "cloud platforms" — and scores only against that JD. The same candidate can come first in one run and third in the next. The scoring rule ties the score to the job title and to concrete skills, and the evals check who ranks first, so an unstable ranking fails instead of slipping through. Expect small score changes between runs — that's normal for an LLM — but the top candidate should stay put.</p>
+</div>
+<div style="background: #faf8f6; border: 1px solid #eee3dc; border-left: 4px solid #FA4616; padding: 18px 22px; margin: 1.4rem 0;">
+  <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin-bottom: 12px;">WHAT THE CODING AGENT DOES WITH THAT</div>
+  <ul style="list-style: none; margin: 0; padding: 0; font-size: 16px; color: #333; line-height: 1.55;">
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">1</span>
+      <span>Loads the <code>uipath-agents</code> skill.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">2</span>
+      <span>Generates <code>main.py</code> with the graph, and Pydantic models for the input, the JD, and the matches.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">3</span>
+      <span>Creates <code>evals/</code> with three cases.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">4</span>
+      <span>Asks you to review before publishing.</span>
+    </li>
+  </ul>
+</div>
+
+<h3 id="what-it-generates">What it generates<a class="headerlink" href="#what-it-generates" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langgraph.graph</span><span class="w"> </span><span class="kn">import</span> <span class="n">StateGraph</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Input</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">job_title</span><span class="p">:</span> <span class="nb">str</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">Output</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">job</span><span class="p">:</span> <span class="n">JobDescription</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">matches</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Match</span><span class="p">]</span>          <span class="c1"># all candidate fields + score + reason</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">def</span><span class="w"> </span><span class="nf">generate_jd</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="c1"># LLM Gateway call -&gt; structured JD</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="o">...</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">def</span><span class="w"> </span><span class="nf">match_candidates</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">candidates</span> <span class="o">=</span> <span class="n">load_json</span><span class="p">(</span><span class="s2">"candidates.json"</span><span class="p">)</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="c1"># LLM Gateway call -&gt; score every candidate, keep the top 3</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="o">...</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="n">graph</span> <span class="o">=</span> <span class="n">StateGraph</span><span class="p">(</span><span class="n">State</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="n">Input</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">Output</span><span class="p">)</span>
+</code></pre></div>
+<p>Treat this as the shape to expect, not the exact code. Your agent's version will differ — that's fine, as long as the input and output names match the contract.</p>
+<h3 id="while-it-builds">While it builds<a class="headerlink" href="#while-it-builds" title="Permanent link">&para;</a></h3>
+<p>Your coding agent takes several minutes to write and check its work. Use that time:</p>
+<ul>
+<li>Watch what it writes. Does the output keep every candidate field? Push back early — it's cheaper than after all the code exists.</li>
+<li>Read <a href="../what-is-a-coding-agent/#skills-in-practice">What's a Coding Agent?</a> and spot the moment it loads the <code>uipath-agents</code> skill.</li>
+<li>When it asks a question, answer briefly and specifically. "Yes, return all original fields" beats "whatever you think".</li>
+</ul>
+<h3 id="run-it-locally">Run it locally<a class="headerlink" href="#run-it-locally" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">When your coding agent asks</label><label for="__tabbed_1_2">Manual run</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Your coding agent may ask if you want to run the agent locally to test it — answer <strong>yes</strong>. It starts the <strong>Developer Console</strong> on your machine and gives you a localhost link to open in your browser, like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>http://localhost:8080/?token=••••••••••••••••
+</code></pre></div>
+<p>Open the full link your coding agent gives you — the token at the end is unique to your session, so don't share it. Then:</p>
+<ol>
+<li>Choose <strong>Autonomous</strong>.</li>
+<li>In <strong>Input</strong>, enter <code>{ "job_title": "Forward Deployed Engineer" }</code>.</li>
+<li>Select <strong>Execute</strong>, and watch each node run.</li>
+<li>When the run completes, the right-hand panel shows the output: the JD and the three matches.</li>
+</ol>
+<p><video src="../coding-agents-hands-on.images/run-agent-locally.mp4" autoplay loop muted playsinline controls aria-label="Running the Coded Agent locally: choosing Autonomous, entering the job title, executing, and reading the output" style="display: block; width: 100%; margin: 1.5rem auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);"></video></p>
+</div>
+<div class="tabbed-block">
+<p>Didn't get asked, or want to run it again? Give this prompt to your coding agent:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Run the {YourName}JobMatchingAgent coded agent locally with this input:
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>{ "job_title": "Forward Deployed Engineer" }
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Show me the output.
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Core goal done</p>
+<p>You get a JD and three matches, highest score first, with the candidate whose headline is Forward Deployed Engineer on top. Each match has a <code>score</code>, a <code>reason</code>, and every field from <code>candidates.json</code> — including <code>date_of_birth</code> and <code>password</code>. Publish next.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Someone else came first?</p>
+<p>Based on <code>candidates.json</code>, <strong>Alice Nguyen</strong> should be the first result — she's the only candidate whose headline is Forward Deployed Engineer. If she isn't, read the <code>reason</code> for each match, then ask your coding agent why Alice Nguyen isn't first and to fix the scoring. Run the eval set to check the fix.</p>
+</div>
+<h3 id="publish-the-agent">Publish the agent<a class="headerlink" href="#publish-the-agent" title="Permanent link">&para;</a></h3>
+<p>Maestro calls processes, not local code, so the agent has to land as a process in the <code>CodingAgentsILT</code> folder. Both paths do the same thing. Run the commands yourself if you want to see each step, or hand the whole job to your coding agent.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Manually</label><label for="__tabbed_2_2">Using Your Coding Agent</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This assumes the <code>uip</code> CLI is installed and you're logged into the right org. Replace the project path and tenant name with your own.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 1. Go to the agent project</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span><span class="o">{</span>YourName<span class="o">}</span>JobMatchingAgent
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># 2. Point the UiPath wrapper at the Python runtime</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>setup<span class="w"> </span>--force
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># 3. Select the target tenant</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>uip<span class="w"> </span>login<span class="w"> </span>tenant<span class="w"> </span><span class="nb">set</span><span class="w"> </span>InvokeWorkshop<span class="w"> </span>--output<span class="w"> </span>json
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>uip<span class="w"> </span>login<span class="w"> </span>status<span class="w"> </span>--output<span class="w"> </span>json
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1"># 4. Initialize the coded agent project</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>init
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="c1"># 5. Publish to the tenant feed</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>uip<span class="w"> </span>codedagent<span class="w"> </span>deploy<span class="w"> </span>--tenant
+</code></pre></div>
+<p>Then, in <strong>Orchestrator</strong>, open the <code>CodingAgentsILT</code> folder and add a process from your <code>{YourName}JobMatchingAgent</code> package.</p>
+</div>
+<div class="tabbed-block">
+<p>Give this prompt to your coding agent — it initializes the project, publishes, and creates the process for you:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Publish the {YourName}JobMatchingAgent coded agent to the CodingAgentsILT
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>folder, and create its process in the CodingAgentsILT folder.
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Watch what it runs</p>
+<p>The agent proposes each command before running it. Read them — publishing writes to your tenant, and that is the one step you want to see before it happens.</p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="checkpoint">Checkpoint<a class="headerlink" href="#checkpoint" title="Permanent link">&para;</a></h3>
+<p>Ten minutes, as a group, before the block ends:</p>
+<ul>
+<li>Two or three people show their matches for "Forward Deployed Engineer". Did the agents agree? Why not?</li>
+<li>Everyone confirms their process shows up in the <code>CodingAgentsILT</code> folder.</li>
+<li>Didn't make it? No problem — in Lab 3 you'll use the trainer's <code>DemoJobMatchingAgent</code>, which follows the same contract.</li>
+</ul>
+<h2 class="lab-title" id="lab-2-the-rpa-workflow"><img src="../coding-agents-hands-on.images/icon-register.png" alt="" style="width: 1.05em; height: 1.05em; vertical-align: -0.12em; margin-right: 0.4em; border: none; box-shadow: none;">Lab 2 — the RPA Workflow<a class="headerlink" href="#lab-2-the-rpa-workflow" title="Permanent link">&para;</a></h2>
+<div style="font-size: 15px; font-style: italic; color: #d1603a; margin: -0.6rem 0 1rem;">Register candidates where there's no API</div>
+
+<p><strong>Block 2 · 30 min</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Minutes</th>
+<th style="text-align: left;">What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0–5</td>
+<td style="text-align: left;">Start your coding agent in your workshop folder and paste the prompt.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5–15</td>
+<td style="text-align: left;">Let it discover the project and generate the workflow.</td>
+</tr>
+<tr>
+<td style="text-align: left;">15–25</td>
+<td style="text-align: left;">Run it with the test input and watch the browser fill in the form.</td>
+</tr>
+<tr>
+<td style="text-align: left;">25–30</td>
+<td style="text-align: left;">Publish it as a process in the <code>CodingAgentsILT</code> folder.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">On a Mac?</p>
+<p>Studio Desktop runs on Windows only. Pair with someone on Windows for this lab. In Lab 3 you can use the trainer's <code>DemoRegisterInUiBank</code> process, which follows the same contract.</p>
+</div>
+<h3 id="why-rpa-for-this-part">Why RPA for this part?<a class="headerlink" href="#why-rpa-for-this-part" title="Permanent link">&para;</a></h3>
+<div style="background: #16213e; border-left: 10px solid #FA4616; padding: 22px 28px; margin: 1.2rem 0 1.4rem;">
+  <div style="font-size: 19px; font-weight: 700; color: #ffffff; line-height: 1.35;">UiBank exposes registration only through a web form.</div>
+  <div style="font-size: 15px; font-style: italic; color: #f6c3ab; margin-top: 9px;">There's no API. Some systems only have a UI — this is exactly what RPA was built for.</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; margin-bottom: 1.5rem;">
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">RPA is the right tool</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Browser-based UI automation is faster and more reliable than scraping.</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Generated, not drawn</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">You'll prompt your coding agent to build the XAML. No dragging activities onto a canvas.</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Built for Maestro</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Takes the shortlist as an argument and returns a status per candidate.</div>
+  </div>
+</div>
+
+<h3 id="what-the-workflow-does">What the workflow does<a class="headerlink" href="#what-the-workflow-does" title="Permanent link">&para;</a></h3>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin: 1.4rem 0 0.8rem;">WHAT THE WORKFLOW DOES</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; margin-bottom: 1.5rem;">
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Receive</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">01</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Parse <code>in_CandidatesJson</code> into a list of candidates</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Loop</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">02</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">For each candidate, open the registration page</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Fill</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">03</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Type each field, submit, wait for success</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Return</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">04</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Output <code>out_ResultsJson</code> with a status per candidate</div>
+  </div>
+</div>
+
+<div style="background: #faf8f6; border: 1px solid #eee3dc; border-left: 4px solid #FA4616; padding: 18px 22px; margin: 1.4rem 0;">
+  <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin-bottom: 12px;">YOUR OBJECTIVES</div>
+  <ul style="list-style: none; margin: 0 0 16px; padding: 0; font-size: 16px; color: #333; line-height: 1.55;">
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">1</span>
+      <span>Prompt your coding agent to generate the XAML workflow.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">2</span>
+      <span>Let it discover the project first, so it sees the existing packages.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">3</span>
+      <span>Run it with the test input and check <code>out_ResultsJson</code>.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">4</span>
+      <span>Publish it as a process in the <code>CodingAgentsILT</code> folder.</span>
+    </li>
+  </ul>
+  <div style="font-size: 15px; color: #4a4a4a; border-top: 1px solid #eee3dc; padding-top: 12px;">
+    <strong style="color: #16213e;">Your target:</strong> <code>uibank.uipath.com/register-account</code>, the test input <a href="#test-input">below</a>, and UiPath Studio Desktop with the default packages.
+  </div>
+</div>
+
+<h3 id="test-input">Test input<a class="headerlink" href="#test-input" title="Permanent link">&para;</a></h3>
+<p>Save this as <code>test-input.json</code> in your workshop folder, next to <code>candidates.json</code>. It holds three candidates in the same shape the Coded Agent returns, so you can test the robot without running Lab 1:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">[</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alice"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nguyen"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Female"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1/15/1990"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Single"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alice.nguyen"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alice.nguyen@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">92</span><span class="p">,</span><span class="w"> </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer-facing engineer with Python and UiPath"</span><span class="p">},</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ben"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Carter"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J."</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Male"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3/22/1985"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Married"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ben.carter"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ben.carter@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">71</span><span class="p">,</span><span class="w"> </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Strong UiPath delivery, less customer-facing"</span><span class="p">},</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="p">{</span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clara"</span><span class="p">,</span><span class="w"> </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Osei"</span><span class="p">,</span><span class="w"> </span><span class="nt">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Female"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms"</span><span class="p">,</span><span class="w"> </span><span class="nt">"employment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full-time"</span><span class="p">,</span><span class="w"> </span><span class="nt">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7/4/1992"</span><span class="p">,</span><span class="w"> </span><span class="nt">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Single"</span><span class="p">,</span><span class="w"> </span><span class="nt">"num_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clara.osei"</span><span class="p">,</span><span class="w"> </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clara.osei@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome2026!"</span><span class="p">,</span><span class="w"> </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">68</span><span class="p">,</span><span class="w"> </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Solid Python and agents, earlier in career"</span><span class="p">}</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">]</span>
+</code></pre></div>
+<h3 id="the-prompt_1">The prompt<a class="headerlink" href="#the-prompt_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Build a UiPath workflow project called {YourName}RegisterInUiBank, in a new
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>folder named {YourName}RegisterInUiBank, that registers candidates at
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>uibank.uipath.com/register-account.
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Arguments:
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>  in_CandidatesJson (In, String): a JSON array of candidates with first_name,
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    last_name, middle_name, sex, title, employment_status, date_of_birth,
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    marital_status, num_dependents, username, email, and password. Other
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    fields may be present - ignore them.
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  out_ResultsJson (Out, String): a JSON array of { username, status } where
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    status is Registered or Failed.
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>UiBank rejects a username or email it has seen before. For each candidate,
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>add _{yourname} and the current time (HHmmss) to the end of the username and
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>to the part of the email before the @ - for example alice.nguyen_maria143205
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>and alice.nguyen_maria143205@example.com. Then skip middle_name when it's
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>empty, submit, and wait for the success message. Wrap each registration in a Try/Catch so
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>one failure doesn't stop the run.
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>Use the contents of test-input.json (in this folder) as the default value
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>of in_CandidatesJson, so the workflow runs on its own. Inspect the project
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>before you write the workflow.
+</code></pre></div>
+<h3 id="how-the-workflow-skill-thinks">How the workflow skill thinks<a class="headerlink" href="#how-the-workflow-skill-thinks" title="Permanent link">&para;</a></h3>
+<p>The <code>uipath-rpa</code> skill is discovery-first. It reads before it writes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Let me inspect the project first...
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  -&gt; Reading project.json
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  -&gt; Found packages: UiPath.UIAutomation.Activities,
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>     UiPath.WebAPI.Activities
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>I'll create Main.xaml with:
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  - Arguments in_CandidatesJson (In) and out_ResultsJson (Out)
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  - Deserialize JSON Array -&gt; candidates
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  - For Each candidate
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>  - Open browser at registration URL
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>  - Type Into each form field (skip empty middle name)
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>  - Click Submit, wait for success element
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>  - Try/Catch per candidate, add { username, status } to results
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>  - Serialize results -&gt; out_ResultsJson
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>Created Main.xaml (validated)
+</code></pre></div>
+<p>Four things worth noticing in that output:</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; margin-bottom: 1.5rem;">
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Reads first</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">01</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Discovers packages before writing any code.</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Picks the right activities</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">02</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Reaches for JSON and UI Automation activities it knows exist.</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Handles edge cases</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">03</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Empty middle name skipped, one failure doesn't stop the run.</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Honours the contract</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">04</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Arguments named exactly as Maestro will pass them.</div>
+  </div>
+</div>
+
+<h3 id="run-it-locally_1">Run it locally<a class="headerlink" href="#run-it-locally_1" title="Permanent link">&para;</a></h3>
+<p>Give this prompt to your coding agent:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Run {YourName}RegisterInUiBank locally with its default input and show me
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>out_ResultsJson.
+</code></pre></div>
+<p>Prefer to watch it step by step? Open the project in <strong>Studio Desktop</strong> and press <strong>Run</strong> — the test input is already set as the default.</p>
+<div class="admonition success">
+<p class="admonition-title">Core goal done</p>
+<p>The browser registers all three candidates and <code>out_ResultsJson</code> shows a status for each one.</p>
+</div>
+<h3 id="publish-the-workflow">Publish the workflow<a class="headerlink" href="#publish-the-workflow" title="Permanent link">&para;</a></h3>
+<p>Give this prompt to your coding agent:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Publish {YourName}RegisterInUiBank to the InvokeWorkshop tenant and
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>make it available as a process in the CodingAgentsILT folder. Confirm
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>`uip login status` first. Report the process name, and stop if any step fails.
+</code></pre></div>
+<p>Then move straight on to Lab 3 — don't polish this workflow past the time box.</p>
+<h2 class="lab-title" id="lab-3-the-maestro-flow">🔗 Lab 3 — the Maestro Flow<a class="headerlink" href="#lab-3-the-maestro-flow" title="Permanent link">&para;</a></h2>
+<div style="font-size: 15px; font-style: italic; color: #d1603a; margin: -0.6rem 0 1rem;">Agent, human, robot — one process</div>
+
+<p><strong>Block 2 · 50 min</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Minutes</th>
+<th style="text-align: left;">What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0–5</td>
+<td style="text-align: left;">Start your coding agent in your workshop folder and paste the prompt.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5–25</td>
+<td style="text-align: left;">Review the flow it proposes, let it build, validate, and publish.</td>
+</tr>
+<tr>
+<td style="text-align: left;">25–40</td>
+<td style="text-align: left;">Run the flow, approve the task in <strong>Action Center</strong>, watch the robot register the candidates.</td>
+</tr>
+<tr>
+<td style="text-align: left;">40–50</td>
+<td style="text-align: left;">Fix what broke and run it again.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="whats-a-maestro-flow">What's a Maestro Flow?<a class="headerlink" href="#whats-a-maestro-flow" title="Permanent link">&para;</a></h3>
+<div style="background: #16213e; border-left: 10px solid #FA4616; padding: 22px 28px; margin: 1.2rem 0 1.4rem;">
+  <div style="font-size: 19px; font-weight: 700; color: #ffffff; line-height: 1.35;">The process that ties agents, robots, and people together.</div>
+  <div style="font-size: 15px; font-style: italic; color: #f6c3ab; margin-top: 9px;">You already built the workers. Maestro decides who works when — and waits for the human.</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; margin-bottom: 1.5rem;">
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 9px;">Orchestrates</div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Calls your agent and your RPA process, and passes data between them.</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 9px;">Humans in the loop</div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Pauses for an approval in Action Center, then carries on.</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 9px;">Observable</div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Every run, every step, every input and output is visible after the fact.</div>
+  </div>
+</div>
+
+<h3 id="what-the-flow-does">What the flow does<a class="headerlink" href="#what-the-flow-does" title="Permanent link">&para;</a></h3>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin: 1.4rem 0 0.8rem;">WHAT THE FLOW DOES</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; margin-bottom: 1.5rem;">
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Start</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">01</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Manual trigger with one input: <code>job_title</code></div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Shortlist</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">02</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">Run the Coded Agent from Lab 1</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Approve</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">03</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">The recruiter approves or rejects the shortlist in Action Center</div>
+  </div>
+  <div style="flex: 1 1 220px; background: #ffffff; border: 1px solid #e8e8e8; border-top: 4px solid #FA4616; padding: 18px 20px; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px;">
+      <span style="font-size: 17px; font-weight: 700; color: #16213e;">Register</span>
+      <span style="font-size: 22px; font-weight: 700; color: #f6c3ab; line-height: 1;">04</span>
+    </div>
+    <div style="font-size: 14.5px; color: #4a4a4a; line-height: 1.55;">On approval, run the RPA workflow from Lab 2</div>
+  </div>
+</div>
+
+<div style="background: #faf8f6; border: 1px solid #eee3dc; border-left: 4px solid #FA4616; padding: 18px 22px; margin: 1.4rem 0;">
+  <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.09em; color: #FA4616; margin-bottom: 12px;">YOUR OBJECTIVES</div>
+  <ul style="list-style: none; margin: 0 0 16px; padding: 0; font-size: 16px; color: #333; line-height: 1.55;">
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">1</span>
+      <span>Prompt your coding agent to build the flow — it loads the <code>uipath-maestro-flow</code> skill.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">2</span>
+      <span>Let it discover your two processes in the folder before it builds anything.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">3</span>
+      <span>Validate and publish the flow.</span>
+    </li>
+    <li style="display: flex; gap: 10px; margin-bottom: 9px; align-items: baseline;">
+      <span style="flex: 0 0 auto; background: #FA4616; color: #ffffff; border-radius: 50%; width: 23px; height: 23px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">4</span>
+      <span>Run it end to end and approve the shortlist yourself.</span>
+    </li>
+  </ul>
+  <div style="font-size: 15px; color: #4a4a4a; border-top: 1px solid #eee3dc; padding-top: 12px;">
+    <strong style="color: #16213e;">Your building blocks:</strong> <code>{YourName}JobMatchingAgent</code> and <code>{YourName}RegisterInUiBank</code> in the <code>CodingAgentsILT</code> folder — or the trainer's <code>DemoJobMatchingAgent</code> and <code>DemoRegisterInUiBank</code> if yours didn't make it.
+  </div>
+</div>
+
+<h3 id="the-prompt_2">The prompt<a class="headerlink" href="#the-prompt_2" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Your own components</label><label for="__tabbed_3_2">Trainer's processes</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use this whenever your agent from Lab 1 and your workflow from Lab 2 are published and work as expected.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Build a Maestro Flow called {YourName}RecruitmentPipeline, in a new local
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>folder named {YourName}RecruitmentPipeline, that runs the recruitment
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>pipeline end to end. Publish it to the CodingAgentsILT folder in Orchestrator.
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>1. Trigger: manual, with one input job_title (string)
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2. Run the {YourName}JobMatchingAgent process with { job_title }
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>3. Create an approval task assigned to me that shows the job title and the
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>   three matches with first_name, last_name, score, and reason.
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>   Approve continues, Reject ends the flow
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>4. On Approve, run the {YourName}RegisterInUiBank process with
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>   in_CandidatesJson set to the agent's matches, serialized as a JSON string
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>5. End with outputs: the agent's job and the RPA's out_ResultsJson
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>Discover both processes in the CodingAgentsILT folder before you start, and
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>ask me before creating anything new. Validate the flow, publish it, and tell
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>me how to run it.
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Use this only if your own agent or workflow isn't published or doesn't work as expected — for example, it fails when you run it, or its output doesn't match the contract. The trainer's <code>DemoJobMatchingAgent</code> and <code>DemoRegisterInUiBank</code> follow the same contract — see <a href="../resources/">Resources</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Build a Maestro Flow called {YourName}RecruitmentPipeline, in a new local
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>folder named {YourName}RecruitmentPipeline, that runs the recruitment
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>pipeline end to end. Publish it to the CodingAgentsILT folder in Orchestrator.
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>1. Trigger: manual, with one input job_title (string)
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2. Run the DemoJobMatchingAgent process with { job_title }
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>3. Create an approval task assigned to me that shows the job title and the
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>   three matches with first_name, last_name, score, and reason.
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>   Approve continues, Reject ends the flow
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>4. On Approve, run the DemoRegisterInUiBank process with
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>   in_CandidatesJson set to the agent's matches, serialized as a JSON string
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>5. End with outputs: the agent's job and the RPA's out_ResultsJson
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>Discover both processes in the CodingAgentsILT folder before you start, and
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>ask me before creating anything new. Validate the flow, publish it, and tell
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>me how to run it.
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Only one of yours isn't working?</p>
+<p>Keep the one that works. For example, if your agent works but your workflow doesn't, use <code>{YourName}JobMatchingAgent</code> in step 2 and <code>DemoRegisterInUiBank</code> in step 4.</p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="see-the-flow-in-studio-web">See the flow in Studio Web<a class="headerlink" href="#see-the-flow-in-studio-web" title="Permanent link">&para;</a></h3>
+<p>Your coding agent builds the flow as a <code>.flow</code> file on your machine. To see it as a diagram, create a Flow in <strong>Studio Web</strong> and upload that file into it.</p>
+<ol>
+<li>Go to <strong><a href="https://cloud.uipath.com/tpenlabs">https://cloud.uipath.com/tpenlabs</a></strong>, select the <strong>InvokeWorkshop</strong> tenant, and open <strong>Studio Web</strong>.</li>
+<li>Select <strong>Create New</strong>, and under <strong>MAESTRO AUTOMATE</strong> choose <strong>Flow</strong>. Name it <code>{YourName}RecruitmentPipeline</code>.</li>
+<li>In the <strong>Explorer</strong>, right-click the <strong>Flow</strong> project and choose <strong>Import</strong>. Select the <code>.flow</code> file from your local <code>{YourName}RecruitmentPipeline</code> folder and select <strong>Open</strong>.</li>
+<li>The imported file opens in a new tab. The canvas shows every node and how they connect.</li>
+</ol>
+<video src="../coding-agents-hands-on.images/studio-web-upload-flow.mp4" autoplay loop muted playsinline aria-label="Creating a Flow under Maestro Automate in Studio Web and uploading the local .flow file" style="display: block; width: 100%; margin: 1.5rem auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 4px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);"></video>
+
+<div class="admonition warning">
+<p class="admonition-title">Flow under Maestro Automate, not Maestro Orchestrate</p>
+<p>The menu lists <strong>Flow</strong> twice. Pick the one under <strong>MAESTRO AUTOMATE</strong> — that's the kind of flow your coding agent built. Don't use the one under <strong>MAESTRO ORCHESTRATE</strong>.</p>
+</div>
+<h3 id="what-it-builds">What it builds<a class="headerlink" href="#what-it-builds" title="Permanent link">&para;</a></h3>
+<p>The flow your coding agent builds should look like this in <strong>Studio Web</strong>:</p>
+<p><img alt="The RecruitmentPipeline Maestro Flow: Manual trigger, Run Job Matching Agent, Prepare Approval Data, Approve Matches with Approve and Reject branches, Register In UiBank, and the Candidates Registered and Matches Rejected end states" class="screenshot" src="../coding-agents-hands-on.images/maestro-flow-W.png" style="width: 100%;" />
+<em>The finished {YourName}RecruitmentPipeline flow</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Node</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Manual trigger</strong></td>
+<td style="text-align: left;">Starts the run with your <code>job_title</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Run Job Matching Agent</strong></td>
+<td style="text-align: left;">Calls your Coded Agent and gets back <code>job</code> and <code>matches</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Prepare Approval Data</strong></td>
+<td style="text-align: left;">A script step that formats the job title and the three matches for the approval task</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Approve Matches</strong></td>
+<td style="text-align: left;">Creates the task in <strong>Action Center</strong> and waits. Approve and Reject lead to different branches.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Register In UiBank</strong></td>
+<td style="text-align: left;">On Approve, runs your RPA workflow with the matches as <code>in_CandidatesJson</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Candidates Registered</strong> / <strong>Matches Rejected</strong></td>
+<td style="text-align: left;">The two ways the run can end</td>
+</tr>
+</tbody>
+</table>
+<p>Your layout and node names can differ a little — what matters is the same order of steps and the two branches after the approval.</p>
+<div class="admonition warning">
+<p class="admonition-title">Make changes in one place</p>
+<p>The upload is a copy. Changes you make in Studio Web don't reach your local files, and changes your coding agent makes locally don't reach Studio Web. If your coding agent changes the flow, upload the <code>.flow</code> file again to see the new version.</p>
+</div>
+<h3 id="run-it-end-to-end">Run it end to end<a class="headerlink" href="#run-it-end-to-end" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Start the flow with <code>job_title</code> set to <code>Forward Deployed Engineer</code> — ask your coding agent to start it, or start it from <strong>Maestro</strong> in your tenant.</li>
+<li>Wait for the agent step to finish. The flow pauses on the approval.</li>
+<li>Open <strong>Action Center</strong>, find the task, read the shortlist, and approve it.</li>
+<li>Watch the RPA job run in <strong>Orchestrator</strong>. The robot registers the three candidates on UiBank.</li>
+<li>Open the finished run in Maestro and check the outputs: the JD and a status for each candidate.</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">What 'done' looks like</p>
+<p>One Maestro run that starts from a job title and ends with registered candidates — with no manual step in between except the approval you designed in.</p>
+</div>
+<h3 id="where-it-usually-breaks">Where it usually breaks<a class="headerlink" href="#where-it-usually-breaks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Symptom</th>
+<th style="text-align: left;">Likely cause</th>
+<th style="text-align: left;">Ask your coding agent to…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Flow can't find a process</td>
+<td style="text-align: left;">The process isn't in the <code>CodingAgentsILT</code> folder yet</td>
+<td style="text-align: left;">List the processes in the folder and fix the name</td>
+</tr>
+<tr>
+<td style="text-align: left;">Robot step fails straight away</td>
+<td style="text-align: left;"><code>in_CandidatesJson</code> got an object, not a string</td>
+<td style="text-align: left;">Serialize the matches to a JSON string before passing them</td>
+</tr>
+<tr>
+<td style="text-align: left;">Robot registers people with blank fields</td>
+<td style="text-align: left;">The agent dropped candidate fields from <code>matches</code></td>
+<td style="text-align: left;">Check the agent's output against the contract</td>
+</tr>
+<tr>
+<td style="text-align: left;">No task in Action Center</td>
+<td style="text-align: left;">The task is assigned to someone else</td>
+<td style="text-align: left;">Assign the approval to your user</td>
+</tr>
+<tr>
+<td style="text-align: left;">RPA job stays pending</td>
+<td style="text-align: left;">No robot is free in the folder</td>
+<td style="text-align: left;">Tell the trainer — robots are shared</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Stuck? That's expected</p>
+<p>Ask your coding agent to explain what it generated, check the run in <strong>Maestro</strong> and <strong>Orchestrator</strong>, and send the interesting failures our way with <code>uip feedback send</code>.</p>
+</div>
+<h2 id="gotchas-youll-hit">Gotchas you'll hit<a class="headerlink" href="#gotchas-youll-hit" title="Permanent link">&para;</a></h2>
+<p>Things every team learns in the first month.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Gotcha</th>
+<th style="text-align: left;">What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Trust but verify</strong></td>
+<td style="text-align: left;">The agent is fast and confident. Always review generated XAML and run the eval set before publishing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Agree on the contract first</strong></td>
+<td style="text-align: left;">Separate components built by separate prompts only fit together if the names and shapes are fixed up front.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pin your skill versions</strong></td>
+<td style="text-align: left;">Skills evolve. Lock to a version in your project so behaviour doesn't shift under you.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Context window matters</strong></td>
+<td style="text-align: left;">On large projects the agent can miss context. Tell it which files to focus on, or use an <code>AGENTS.md</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auth before everything</strong></td>
+<td style="text-align: left;">Run <code>uip login</code> first. Skills can't deploy if the CLI session expired — this is the usual cause of "it just stopped working".</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-you-built">What you built<a class="headerlink" href="#what-you-built" title="Permanent link">&para;</a></h2>
+<p>One end-to-end recruitment pipeline:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">01</td>
+<td style="text-align: left;"><strong>Coded Agent</strong></td>
+<td style="text-align: left;">LangGraph agent. Generates a job description and shortlists the top 3 candidates.</td>
+</tr>
+<tr>
+<td style="text-align: right;">02</td>
+<td style="text-align: left;"><strong>RPA Workflow</strong></td>
+<td style="text-align: left;">XAML workflow. Registers each candidate on UiBank and returns a status per candidate.</td>
+</tr>
+<tr>
+<td style="text-align: right;">03</td>
+<td style="text-align: left;"><strong>Maestro Flow</strong></td>
+<td style="text-align: left;">Runs the agent, waits for the recruiter's approval in Action Center, then runs the robot.</td>
+</tr>
+</tbody>
+</table>
+<p>All three were built with your coding agent, and they run as one process — in two 90-minute blocks.</p>
+<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p><strong>This week</strong></p>
+<ul>
+<li>Install the skills on your laptop and actually use them.</li>
+<li>Run your pipeline with a different job title and see how the shortlist changes.</li>
+</ul>
+<p><strong>Next 30 days</strong></p>
+<ul>
+<li>Rebuild something you already maintain with a coding agent. Compare how long it took, and note where the agent needed correcting.</li>
+<li>Write your own skill for a pattern your team repeats, so the agent gets it right without being told twice.</li>
+<li>Push past the happy path: ask the agent for eval sets, error handling, and the deploy step you'd normally do by hand.</li>
+</ul>
+<p><strong>Ongoing</strong></p>
+<ul>
+<li>Bring your questions. No question is too basic, especially this early.</li>
+<li>Tell us when something doesn't work. Run <code>uip feedback send</code> the moment a skill guesses wrong, a command fails, or a step takes three tries.</li>
+<li>Say what you'd want next. The rough edges you report are what shape the next version of the skills and the CLI.</li>
+</ul>
+<h2 id="appendix-cli-cheat-sheet">Appendix: CLI cheat sheet<a class="headerlink" href="#appendix-cli-cheat-sheet" title="Permanent link">&para;</a></h2>
+<p>Commands you'll run every day with the <code>uip</code> CLI.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">What it does</th>
+<th style="text-align: left;">When you'll use it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uip skills install</code></td>
+<td style="text-align: left;">Install UiPath skills into your coding agent</td>
+<td style="text-align: left;">First-time setup, per project</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uip login</code></td>
+<td style="text-align: left;">Authenticate with your UiPath tenant</td>
+<td style="text-align: left;">Start of each session</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uipath new</code></td>
+<td style="text-align: left;">Scaffold a new Coded Agent project</td>
+<td style="text-align: left;">Starting a new agent</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uipath run</code></td>
+<td style="text-align: left;">Run the agent locally with <code>input.json</code></td>
+<td style="text-align: left;">Testing during development</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uipath eval</code></td>
+<td style="text-align: left;">Run the evaluation set, score against expectations</td>
+<td style="text-align: left;">Before deploying</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uipath publish</code></td>
+<td style="text-align: left;">Pack and publish to your tenant</td>
+<td style="text-align: left;">Shipping</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>uip feedback send</code></td>
+<td style="text-align: left;">Report a bug or a skill that guessed wrong</td>
+<td style="text-align: left;">Whenever something breaks</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../loan-application-underwriting/agenda/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Agenda">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Agenda
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../resources/" class="md-footer__link md-footer__link--next" aria-label="Next: Resources">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Resources
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.integrate", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
