@@ -517,7 +517,8 @@ Save this as `test-input.json` in your workshop folder, next to `candidates.json
 ### The prompt
 
 ```text
-Build a UiPath workflow project called {YourName}RegisterInUiBank, in a new
+Build a UiPath workflow project with Cross-platform compatibility (not
+Windows or Windows - Legacy) called {YourName}RegisterInUiBank, in a new
 folder named {YourName}RegisterInUiBank, that registers candidates at
 uibank.uipath.com/register-account.
 
