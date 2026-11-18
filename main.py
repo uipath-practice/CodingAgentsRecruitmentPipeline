@@ -29,7 +29,7 @@ ENVIRONMENTS = {
     },
     "prod": {
         "training_url": "https://cloud.uipath.com/tpenlabs",
-        "training_tenant": "InvokeWorkshop",
+        "training_tenant": "CommunityWorkshop",
         "env_label": "Production",
     },
 }

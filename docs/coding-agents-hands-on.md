@@ -13,7 +13,7 @@ You'll automate all three — by describing what you want in plain English and l
 By the end of the session you'll start one Maestro run with a job title and watch it end with approved candidates registered on UiBank. Along the way you'll have generated a Python agent, an XAML workflow, and a Maestro Flow — all by prompting a coding agent, not by dragging activities onto a canvas.
 
 !!! tip "Training Environment"
-    Log in at **[https://cloud.uipath.com/tpenlabs](https://cloud.uipath.com/tpenlabs)** using tenant **InvokeWorkshop**.
+    Log in at **[https://cloud.uipath.com/tpenlabs](https://cloud.uipath.com/tpenlabs)** using tenant **CommunityWorkshop**.
 
 ## What You'll Build
 

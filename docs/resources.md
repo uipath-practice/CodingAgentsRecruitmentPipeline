@@ -3,7 +3,7 @@
 **Reference processes and links to keep handy during and after the session.**
 
 !!! tip "Training Environment"
-    Log in at **[https://cloud.uipath.com/tpenlabs](https://cloud.uipath.com/tpenlabs)** using tenant **InvokeWorkshop**.
+    Log in at **[https://cloud.uipath.com/tpenlabs](https://cloud.uipath.com/tpenlabs)** using tenant **CommunityWorkshop**.
 
 ## Trainer's reference processes
 
